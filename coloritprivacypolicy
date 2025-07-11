@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColourIt - Privacy Policy</title>
+</head>
+<body>
+    <h1>Privacy Policy for ColourIt</h1>
+    <p>Effective Date: 11/07/2025</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>We do not collect any personal information such as name, email, or location. Anonymous usage data may be collected to improve app experience, such as device type, crash logs, and usage statistics. Your drawings stay on your device unless you choose to share them.</p>
+
+    <h2>2. How We Use Information</h2>
+    <p>Anonymous data is used only to improve app performance and fix bugs. We never sell or rent any information.</p>
+
+    <h2>3. Children’s Privacy</h2>
+    <p>ColourIt is designed to be child-friendly and complies with applicable laws. We do not knowingly collect personal data from children under 13. Contact us if you believe this has occurred.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>We may use services like Google AdMob and Firebase Analytics. These may collect non-personal identifiers. Please review their privacy policies:</p>
+    <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+    </ul>
+
+    <h2>5. Your Data Rights</h2>
+    <p>Since we do not collect personal data, there is no account to delete or modify. Uninstalling the app removes all local data.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy. Changes will be posted on this page with a new effective date.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have questions, contact us at:<br>
+    📧 dev@tarantiansystems.com</p>
+</body>
+</html>

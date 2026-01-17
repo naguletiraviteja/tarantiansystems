@@ -203,6 +203,124 @@
             line-height: 1.8;
         }
 
+        .products {
+            padding: 6rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .products-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-type {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.3rem 0.8rem;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .product-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
         .about {
             padding: 6rem 0;
             text-align: center;
@@ -324,6 +442,159 @@
             .contact-info {
                 grid-template-columns: 1fr;
             }
+
+            .contact-form-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .honeypot {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-details .contact-item {
+            text-align: left;
+        }
+
+        .success-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .success-modal.show {
+            display: flex;
+        }
+
+        .success-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin: 1rem;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-content h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .success-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .success-btn {
+            padding: 0.8rem 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .success-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
     </style>
 </head>
@@ -334,6 +605,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -368,10 +640,36 @@
                         <h3>Artificial Intelligence</h3>
                         <p>Harness the power of AI to transform your business. We develop intelligent solutions that automate processes and provide valuable insights.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎮</div>
-                        <h3>Game Development</h3>
-                        <p>Interactive gaming experiences that captivate audiences. We create engaging games with stunning visuals and immersive gameplay mechanics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <p class="products-subtitle">AI-powered applications built with vibe coding</p>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="gestureplay.webp" alt="GesturePlay" class="product-icon">
+                        <h3>GesturePlay</h3>
+                        <span class="product-type">Android App</span>
+                        <div class="ai-badge">🤖 Vibe Coded with AI</div>
+                        <p>Control your device with intuitive hand gestures. A revolutionary way to interact with your Android phone using gesture recognition technology.</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="colourit.webp" alt="Colourit" class="product-icon">
+                        <h3>Colourit</h3>
+                        <span class="product-type">Android App</span>
+                        <div class="ai-badge">🤖 Vibe Coded with AI</div>
+                        <p>Unleash your creativity with this powerful coloring and design application. Transform your ideas into vibrant digital artwork.</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="easyheictojpg.webp" alt="Easy HEIC to JPG" class="product-icon">
+                        <h3>Easy HEIC to JPG</h3>
+                        <span class="product-type">Web Application</span>
+                        <div class="ai-badge">🤖 Vibe Coded with AI</div>
+                        <p>Convert your HEIC images to JPG format instantly. Fast, free, and privacy-focused image conversion right in your browser.</p>
+                        <a href="https://easyheictojpg.com" target="_blank" class="product-link">Visit Website</a>
                     </div>
                 </div>
             </div>
@@ -387,19 +685,50 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Get In Touch</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <h3>Email</h3>
-                        <p>naguletiraviteja@tarantiansystems.com</p>
+                <div class="contact-form-container">
+                    <div class="contact-form">
+                        <h3>Send us a message</h3>
+                        <form action="https://formspree.io/f/mdaaadep" method="POST">
+                            <!-- Honeypot field to prevent spam -->
+                            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Software Development">Software Development</option>
+                                    <option value="Android App Development">Android App Development</option>
+                                    <option value="Resolve Bugs in Vibe Coded Projects">Resolve Bugs in Vibe Coded Projects</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <h3>Address</h3>
-                        <p>H.no 4-99, Sai Vishnu Enclave<br>
-                        Adoni,Adoni 1 Town Police Station,
-                            Adoni, Kurnool District - 518301<br>
-                        Andhra Pradesh, India</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <h3>Email</h3>
+                            <p>naguletiraviteja@tarantiansystems.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <h3>Address</h3>
+                            <p>H.no 4-99, Sai Vishnu Enclave<br>
+                            Adoni,Adoni 1 Town Police Station,
+                                Adoni, Kurnool District - 518301<br>
+                            Andhra Pradesh, India</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -411,6 +740,16 @@
             <p>&copy; 2025 Tarantian Systems. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-icon">&#10003;</div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for contacting us. We'll get back to you soon.</p>
+            <button class="success-btn" onclick="closeModal()">Back to Website</button>
+        </div>
+    </div>
 
     <script>
         // Smooth scrolling for navigation links
@@ -458,6 +797,52 @@
             card.style.transform = 'translateY(50px)';
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
+        });
+
+        // Observe product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Form submission with success modal
+        const contactForm = document.querySelector('.contact-form form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('successModal').classList.add('show');
+                    contactForm.reset();
+                } else {
+                    alert('Oops! There was a problem. Please try again.');
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem. Please try again.');
+            });
+        });
+
+        // Close modal function
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
         });
     </script>
 </body>
